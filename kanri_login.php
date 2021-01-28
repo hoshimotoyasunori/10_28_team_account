@@ -35,6 +35,10 @@
                 <label for="exampleInputteam1"></label>
                 <input type="text" class="form-control" id="exampleInputteam1" placeholder="team" name="team">
             </div>
+            <div class="form-group">
+                <label for="exampleInputpass1"></label>
+                <input type="password" class="form-control" id="exampleInputpass1" placeholder="password" name="password">
+            </div>
             <div class="btn">
                 <button class="btn btn-default">送信</button>
             </div>

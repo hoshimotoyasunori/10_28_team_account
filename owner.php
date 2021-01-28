@@ -4,7 +4,7 @@ include("functions.php");
 // check_session_id();
 // DB接続
 $pdo = connect_to_db();
-$sql = 'SELECT team FROM users WHERE id = 12';
+$sql = 'SELECT team FROM users ';
 
 // SQL準備&実行
 $stmt = $pdo->prepare($sql);
@@ -41,23 +41,23 @@ if ($status == false) {
 
     <!-- Bootstrap CSSの読み込み -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title><?= $output ?></title>
+    <title>TOP</title>
 </head>
 
 <body style="background-color:#e3f2fd;">
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light mb-2 bg-dark text-white">
-            <a class=" navbar-brand  text-white" href="#"><?= $output ?></a>
+            <a class=" navbar-brand  text-white" href="#">TOP</a>
             <div class="dropdown float-right">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     menu
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/introduction.php">企業情報</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/kanri_login.php">管理者ページ</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/login.php">選手ページ</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/meeting.php">ミーティング</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/sample.php">月間スケジュール</a>
+                    <a class="nav-link text-dark" href="introduction.php">企業情報</a>
+                    <a class="nav-link text-dark" href="kanri_login.php">管理者ページ</a>
+                    <a class="nav-link text-dark" href="login.php">選手ページ</a>
+                    <a class="nav-link text-dark" href="meeting.php">ミーティング</a>
+                    <a class="nav-link text-dark" href="sample.php">月間スケジュール</a>
                 </div>
             </div>
         </nav>
@@ -107,8 +107,8 @@ if ($status == false) {
     <footer class="bottom"></footer>
     <!-- フッター -->
     <footer class="text-center bg-dark text-white fixed-bottom">
-        <a href="http://localhost/2021_01_16/index.php">
-            <p class="py-3">© 2012-2021_8PoS-system</p>
+        <a href="index.php">
+            <p class="py-3">© 2012-2021_8PoS.Lab</p>
         </a>
     </footer>
     <footer>　　</footer>

@@ -4,7 +4,7 @@ include("functions.php");
 check_session_id();
 // DB接続
 $pdo = connect_to_db();
-$sql = 'SELECT team FROM users WHERE id = 12';
+$sql = 'SELECT team FROM users';
 
 // SQL準備&実行
 $stmt = $pdo->prepare($sql);
@@ -53,10 +53,10 @@ if ($status == false) {
                     menu
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/owner.php">TOP</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/all_member.php">メンバー</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/sample.php">月間スケジュール</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/logout.php">ログアウト</a>
+                    <a class="nav-link text-dark" href="owner.php">TOP</a>
+                    <a class="nav-link text-dark" href="all_member.php">メンバー</a>
+                    <a class="nav-link text-dark" href="sample.php">月間スケジュール</a>
+                    <a class="nav-link text-dark" href="logout.php">ログアウト</a>
                 </div>
             </div>
         </nav>

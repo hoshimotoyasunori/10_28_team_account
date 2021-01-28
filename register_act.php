@@ -8,6 +8,7 @@ check_session_id();
 $username = $_POST["username"];
 $mail = $_POST["mail"];
 $password = $_POST["password"];
+$position = $_POST["position"];
 
 // DB接続関数
 $pdo = connect_to_db();
@@ -36,13 +37,14 @@ if ($stmt->fetchColumn() > 0) {
 
 // ユーザ登録SQL作成
 // `created_at`と`updated_at`には実行時の`sysdate()`関数を用いて実行時の日時を入力する
-$sql = 'INSERT INTO team_member_table(id, username, mail, password, is_created ,updated_at) VALUES(NULL, :username, :mail, :password, sysdate(), sysdate())';
+$sql = 'INSERT INTO team_member_table(id, username, mail, password, position, is_created ,updated_at) VALUES(NULL, :username, :mail, :password, :position, sysdate(), sysdate())';
 
 // SQL準備&実行
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':username', $username, PDO::PARAM_STR);
 $stmt->bindValue(':mail', $mail, PDO::PARAM_STR);
 $stmt->bindValue(':password', $password, PDO::PARAM_STR);
+$stmt->bindValue(':position', $position, PDO::PARAM_STR);
 // var_dump($_POST);
 // exit();
 $status = $stmt->execute();

@@ -22,9 +22,9 @@
                     menu
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/owner.php">TOPページ</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/kanri_login.php">管理者ページ</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/login.php">選手ページ</a>
+                    <a class="nav-link text-dark" href="owner.php">TOPページ</a>
+                    <a class="nav-link text-dark" href="kanri_login.php">管理者ページ</a>
+                    <a class="nav-link text-dark" href="login.php">選手ページ</a>
                 </div>
             </div>
 
@@ -39,19 +39,12 @@
             <p>ビジョン</p>
             <h3>Smile with sports！</h3>
         </div>
+        <div><img src="img/8PoS.png" alt=""></div>
         <div>
             <h3>８つの柱-8 pillars of stability-
-                <!-- <h3>心</h3>
-                <h3>お金</h3>
-                <h3>成長</h3>
-                <h3>健康</h3>
-                <h3>時間</h3>
-                <h3>仕事</h3>
-                <h3>貢献</h3>
-                <h3>人間関係</h3> -->
-                <!-- <img src="img/8PoS.png" alt=""> -->
             </h3>
         </div>
+
     </main>
     <!-- フッター -->
     <footer class="text-center bg-dark text-white fixed-bottom">

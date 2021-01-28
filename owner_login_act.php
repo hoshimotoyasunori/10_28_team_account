@@ -48,9 +48,8 @@ if ($status == false) {
     $val = $stmt->fetch(PDO::FETCH_ASSOC);
     if (!$val) {   // 該当データがないときはログインページへのリンクを表示
         echo "<p>ログイン情報に誤りがあります.</p>";
-        echo '<a href="register.php">登録画面</a><br>';
-        echo '<a href="login.php">ログイン</a><br>';
-        echo '<a href="owner.php">Top画面</a><br>';
+        echo '<a href="owner_login.php">ログイン</a><br>';
+        echo '<a href="index.php">Top画面</a><br>';
         exit();
     } else {
         $_SESSION = array(); // セッション変数を空にする 

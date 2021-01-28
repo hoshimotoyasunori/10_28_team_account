@@ -8,14 +8,14 @@
 
     <!-- Bootstrap CSSの読み込み -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title>∞PoS-innovation</title>
+    <title>∞PoS.Lab</title>
 </head>
 
 <body style="background-color:#e3f2fd;">
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light mb-2 bg-dark text-white">
             <a class=" navbar-brand  text-white" href=introduction.php>
-                8PoS-innovation</a>
+                8PoS.Lab</a>
             <div class="dropdown float-right">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     menu
@@ -25,8 +25,8 @@
                     <a class="nav-link text-dark" href="#Team-build">Team-build</a>
                     <a class="nav-link text-dark" href="#Tool">Tool</a>
                     <a class="nav-link text-dark" href="#contact">Contact</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/introduction.php">企業情報</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/owner_login.php">チーム</a>
+                    <a class="nav-link text-dark" href="introduction.php">企業情報</a>
+                    <a class="nav-link text-dark" href="owner_login.php">チーム</a>
                 </div>
             </div>
 
@@ -165,7 +165,7 @@
     <!-- フッター -->
     <footer class="text-center bg-dark text-white fixed-bottom">
         <a href="introduction.php">
-            <p class="py-3">© 2012-2021_∞PoS-innovation</p>
+            <p class="py-3">© 2012-2021_∞PoS.Lab</p>
         </a>
     </footer>
     <footer>　　</footer>

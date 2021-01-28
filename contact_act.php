@@ -37,7 +37,5 @@ if ($status == false) {
 } else {
     // 正常にSQLが実行された場合は入力ページファイルに移動し，入力ページの処理を実行する
     header("Location:index.php");
-    $alert = "<script type='text/javascript'>alert('こちらは侍エンジニアです。');</script>";
-    echo $alert;
     exit();
 }

@@ -67,13 +67,27 @@ if ($status == false) {
                 password:<input type="password" name="password" value="<?= $record["password"] ?>">
             </div>
             <div>
+                position:<select name="position" id="">
+
+                    <!-- <option value=""><?= $record["position"] ?></option> -->
+                    <option value="pr">pr</option>
+                    <option value="ho">ho</option>
+                    <option value="lo">lo</option>
+                    <option value="fl">fl</option>
+                    <option value="no8">no8</option>
+                    <option value="sh">sh</option>
+                    <option value="so">so</option>
+                    <option value="cb">cb</option>
+                    <option value="wtb">wtb</option>
+                    <option value="fb">fb</option>
+                </select>
+            </div>
+            <div>
                 <button>更新</button>
             </div>
             <input type="hidden" name="id" value="<?= $record["id"] ?>">
         </fieldset>
-        <div class="rei">
-            <?= "<img src=\"" . $record['image'] . "\">"  ?>
-        </div>
+
     </form>
 
 </body>

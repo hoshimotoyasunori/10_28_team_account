@@ -66,7 +66,7 @@ try {
             $extension = "mp4";
         } else {
             echo "非対応ファイルです．<br/>";
-            echo ("<a href=\"index.php\">戻る</a><br/>");
+            echo ("<a href=\"all_member.php\">戻る</a><br/>");
             exit(1);
         }
 

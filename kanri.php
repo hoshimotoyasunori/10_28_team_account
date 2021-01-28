@@ -2,14 +2,19 @@
 session_start();
 include("functions.php");
 check_session_id();
+
+$user_id = $_SESSION['id'];
 // DB接続
 $pdo = connect_to_db();
-$sql = 'SELECT * FROM team_member_table';
-
+$sql = 'SELECT * FROM team_member_table LEFT OUTER JOIN (SELECT team_member_id, COUNT(id) AS cnt
+        FROM like_table GROUP BY team_member_id) AS likes
+        ON team_member_table.id = likes.team_member_id';
 // SQL準備&実行
 $stmt = $pdo->prepare($sql);
 $status = $stmt->execute();
 // データ登録処理後
+// var_dump($_POST);
+// exit();
 if ($status == false) {
     // SQL実行に失敗した場合はここでエラーを出力し，以降の処理を中止する
     $error = $stmt->errorInfo();
@@ -23,7 +28,7 @@ if ($status == false) {
 
     foreach ($result as $record) {
         // $output .= "<td>{$record["team"]}</td>";
-        $output .= "<div>{$record["username"]}<br>{$record["mail"]}<br>{$record["password"]}<br><a href='edit.php?id={$record["id"]}'>編集</a>・<a href='delete.php?id={$record["id"]}'>消去</a><br></div>";
+        $output .= "<div>{$record["username"]}<a href='like_create.php?user_id={$user_id}&team_member_id={$record["id"]}'>like{$record["cnt"]}</a><a href='edit.php?id={$record["id"]}'>編集</a>・<a href='delete.php?id={$record["id"]}'>消去</a><br></div>";
     }
     unset($value);
 }

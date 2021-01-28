@@ -36,6 +36,21 @@
                 <label for="exampleInputPassword1"></label>
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
             </div>
+            <div class="form-group">
+                <label for="exampleInputposition1"></label>
+                ポジション：<select name="position" id="">
+                    <option value="pr">pr</option>
+                    <option value="ho">ho</option>
+                    <option value="lo">lo</option>
+                    <option value="fl">fl</option>
+                    <option value="no8">no8</option>
+                    <option value="sh">sh</option>
+                    <option value="so">so</option>
+                    <option value="cb">cb</option>
+                    <option value="wtb">wtb</option>
+                    <option value="fb">fb</option>
+                </select>
+            </div>
             <div class="btn">
                 <button class="btn btn-default">送信</button>
             </div>
