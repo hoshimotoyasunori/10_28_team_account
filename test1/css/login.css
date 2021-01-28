@@ -1,0 +1,39 @@
+html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+body{
+    width: 80vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30vh;
+}
+.form-inline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form-group{
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 10%;
+}
+input{
+    width: 40vw;
+    height: 5vh;
+}

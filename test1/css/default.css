@@ -1,0 +1,322 @@
+/*************カレンダーのcss********************/
+
+table.topcalendar{
+	width: 100%;
+	height: calc(80vh/7);
+	/* テーブルの線を細くする */
+	border-collapse: collapse;
+
+	font-size: 14px;
+	
+}
+/* カレンダーの全てのtb */
+*#topcalendar_line0_week0_holiday0,
+*#topcalendar_line0_week1_holiday0,
+*#topcalendar_line0_week2_holiday0,
+*#topcalendar_line0_week3_holiday0,
+*#topcalendar_line0_week4_holiday0,
+*#topcalendar_line0_week5_holiday0,
+*#topcalendar_line0_week6_holiday0,
+*#topcalendar_line1_week0_holiday0,
+*#topcalendar_line1_week1_holiday0,
+*#topcalendar_line1_week2_holiday0,
+*#topcalendar_line1_week3_holiday0,
+*#topcalendar_line1_week4_holiday0,
+*#topcalendar_line1_week5_holiday0,
+*#topcalendar_line1_week6_holiday0,
+*#topcalendar_line2_week0_holiday0,
+*#topcalendar_line2_week1_holiday0,
+*#topcalendar_line2_week2_holiday0,
+*#topcalendar_line2_week3_holiday0,
+*#topcalendar_line2_week4_holiday0,
+*#topcalendar_line2_week5_holiday0,
+*#topcalendar_line2_week6_holiday0,
+*#topcalendar_line3_week0_holiday0,
+*#topcalendar_line3_week1_holiday0,
+*#topcalendar_line3_week2_holiday0,
+*#topcalendar_line3_week3_holiday0,
+*#topcalendar_line3_week4_holiday0,
+*#topcalendar_line3_week5_holiday0,
+*#topcalendar_line3_week6_holiday0,
+*#topcalendar_line4_week0_holiday0,
+*#topcalendar_line4_week1_holiday0,
+*#topcalendar_line4_week2_holiday0,
+*#topcalendar_line4_week3_holiday0,
+*#topcalendar_line4_week4_holiday0,
+*#topcalendar_line4_week5_holiday0,
+*#topcalendar_line4_week6_holiday0,
+*#topcalendar_line5_week0_holiday0,
+*#topcalendar_line5_week1_holiday0,
+*#topcalendar_line5_week2_holiday0,
+*#topcalendar_line5_week3_holiday0,
+*#topcalendar_line5_week4_holiday0,
+*#topcalendar_line5_week5_holiday0,
+*#topcalendar_line5_week6_holiday0,
+*#topcalendar_line6_week0_holiday0,
+*#topcalendar_line6_week1_holiday0,
+*#topcalendar_line6_week2_holiday0,
+*#topcalendar_line6_week3_holiday0,
+*#topcalendar_line6_week4_holiday0,
+*#topcalendar_line6_week5_holiday0,
+*#topcalendar_line6_week6_holiday0,
+*#topcalendar_line0_week0_holiday1,
+*#topcalendar_line0_week1_holiday1,
+*#topcalendar_line0_week2_holiday1,
+*#topcalendar_line0_week3_holiday1,
+*#topcalendar_line0_week4_holiday1,
+*#topcalendar_line0_week5_holiday1,
+*#topcalendar_line0_week6_holiday1,
+*#topcalendar_line1_week0_holiday1,
+*#topcalendar_line1_week1_holiday1,
+*#topcalendar_line1_week2_holiday1,
+*#topcalendar_line1_week3_holiday1,
+*#topcalendar_line1_week4_holiday1,
+*#topcalendar_line1_week5_holiday1,
+*#topcalendar_line1_week6_holiday1,
+*#topcalendar_line2_week0_holiday1,
+*#topcalendar_line2_week1_holiday1,
+*#topcalendar_line2_week2_holiday1,
+*#topcalendar_line2_week3_holiday1,
+*#topcalendar_line2_week4_holiday1,
+*#topcalendar_line2_week5_holiday1,
+*#topcalendar_line2_week6_holiday1,
+*#topcalendar_line3_week0_holiday1,
+*#topcalendar_line3_week1_holiday1,
+*#topcalendar_line3_week2_holiday1,
+*#topcalendar_line3_week3_holiday1,
+*#topcalendar_line3_week4_holiday1,
+*#topcalendar_line3_week5_holiday1,
+*#topcalendar_line3_week6_holiday1,
+*#topcalendar_line4_week0_holiday1,
+*#topcalendar_line4_week1_holiday1,
+*#topcalendar_line4_week2_holiday1,
+*#topcalendar_line4_week3_holiday1,
+*#topcalendar_line4_week4_holiday1,
+*#topcalendar_line4_week5_holiday1,
+*#topcalendar_line4_week6_holiday1,
+*#topcalendar_line5_week0_holiday1,
+*#topcalendar_line5_week1_holiday1,
+*#topcalendar_line5_week2_holiday1,
+*#topcalendar_line5_week3_holiday1,
+*#topcalendar_line5_week4_holiday1,
+*#topcalendar_line5_week5_holiday1,
+*#topcalendar_line5_week6_holiday1,
+*#topcalendar_line6_week0_holiday1,
+*#topcalendar_line6_week1_holiday1,
+*#topcalendar_line6_week2_holiday1,
+*#topcalendar_line6_week3_holiday1,
+*#topcalendar_line6_week4_holiday1,
+*#topcalendar_line6_week5_holiday1,
+*#topcalendar_line6_week6_holiday1
+{
+	/*テキスト上揃え*/
+	vertical-align:top;
+	/*tbの幅*/
+	width: calc(100vw/7);
+}
+
+/* カレンダーの日付のtb */
+*#topcalendar_line1_week0_holiday0,
+*#topcalendar_line1_week1_holiday0,
+*#topcalendar_line1_week2_holiday0,
+*#topcalendar_line1_week3_holiday0,
+*#topcalendar_line1_week4_holiday0,
+*#topcalendar_line1_week5_holiday0,
+*#topcalendar_line1_week6_holiday0,
+*#topcalendar_line2_week0_holiday0,
+*#topcalendar_line2_week1_holiday0,
+*#topcalendar_line2_week2_holiday0,
+*#topcalendar_line2_week3_holiday0,
+*#topcalendar_line2_week4_holiday0,
+*#topcalendar_line2_week5_holiday0,
+*#topcalendar_line2_week6_holiday0,
+*#topcalendar_line3_week0_holiday0,
+*#topcalendar_line3_week1_holiday0,
+*#topcalendar_line3_week2_holiday0,
+*#topcalendar_line3_week3_holiday0,
+*#topcalendar_line3_week4_holiday0,
+*#topcalendar_line3_week5_holiday0,
+*#topcalendar_line3_week6_holiday0,
+*#topcalendar_line4_week0_holiday0,
+*#topcalendar_line4_week1_holiday0,
+*#topcalendar_line4_week2_holiday0,
+*#topcalendar_line4_week3_holiday0,
+*#topcalendar_line4_week4_holiday0,
+*#topcalendar_line4_week5_holiday0,
+*#topcalendar_line4_week6_holiday0,
+*#topcalendar_line5_week0_holiday0,
+*#topcalendar_line5_week1_holiday0,
+*#topcalendar_line5_week2_holiday0,
+*#topcalendar_line5_week3_holiday0,
+*#topcalendar_line5_week4_holiday0,
+*#topcalendar_line5_week5_holiday0,
+*#topcalendar_line5_week6_holiday0,
+*#topcalendar_line6_week0_holiday0,
+*#topcalendar_line6_week1_holiday0,
+*#topcalendar_line6_week2_holiday0,
+*#topcalendar_line6_week3_holiday0,
+*#topcalendar_line6_week4_holiday0,
+*#topcalendar_line6_week5_holiday0,
+*#topcalendar_line6_week6_holiday0,
+*#topcalendar_line1_week0_holiday1,
+*#topcalendar_line1_week1_holiday1,
+*#topcalendar_line1_week2_holiday1,
+*#topcalendar_line1_week3_holiday1,
+*#topcalendar_line1_week4_holiday1,
+*#topcalendar_line1_week5_holiday1,
+*#topcalendar_line1_week6_holiday1,
+*#topcalendar_line2_week0_holiday1,
+*#topcalendar_line2_week1_holiday1,
+*#topcalendar_line2_week2_holiday1,
+*#topcalendar_line2_week3_holiday1,
+*#topcalendar_line2_week4_holiday1,
+*#topcalendar_line2_week5_holiday1,
+*#topcalendar_line2_week6_holiday1,
+*#topcalendar_line3_week0_holiday1,
+*#topcalendar_line3_week1_holiday1,
+*#topcalendar_line3_week2_holiday1,
+*#topcalendar_line3_week3_holiday1,
+*#topcalendar_line3_week4_holiday1,
+*#topcalendar_line3_week5_holiday1,
+*#topcalendar_line3_week6_holiday1,
+*#topcalendar_line4_week0_holiday1,
+*#topcalendar_line4_week1_holiday1,
+*#topcalendar_line4_week2_holiday1,
+*#topcalendar_line4_week3_holiday1,
+*#topcalendar_line4_week4_holiday1,
+*#topcalendar_line4_week5_holiday1,
+*#topcalendar_line4_week6_holiday1,
+*#topcalendar_line5_week0_holiday1,
+*#topcalendar_line5_week1_holiday1,
+*#topcalendar_line5_week2_holiday1,
+*#topcalendar_line5_week3_holiday1,
+*#topcalendar_line5_week4_holiday1,
+*#topcalendar_line5_week5_holiday1,
+*#topcalendar_line5_week6_holiday1,
+*#topcalendar_line6_week0_holiday1,
+*#topcalendar_line6_week1_holiday1,
+*#topcalendar_line6_week2_holiday1,
+*#topcalendar_line6_week3_holiday1,
+*#topcalendar_line6_week4_holiday1,
+*#topcalendar_line6_week5_holiday1,
+*#topcalendar_line6_week6_holiday1
+{
+	/*tbの高さ*/
+	height: calc(80vh/7);
+}
+
+
+/* カレンダー0行目の曜日のtb */
+*#topcalendar_line0_week0_holiday0,
+*#topcalendar_line0_week1_holiday0,
+*#topcalendar_line0_week2_holiday0,
+*#topcalendar_line0_week3_holiday0,
+*#topcalendar_line0_week4_holiday0,
+*#topcalendar_line0_week5_holiday0,
+*#topcalendar_line0_week6_holiday0
+{
+	/*tbの高さ*/
+	height:18px;
+	/* テーブルの中の文字を中央ゾロ絵にする */
+	text-align: center;
+}
+/* カレンダー0行目の日曜日のtb */
+*#topcalendar_line0_week0_holiday0
+{
+	/* 色は赤 */
+	background-color: #FFE6EC;
+}
+/* カレンダー0行目の月曜日～金曜日のtb */
+*#topcalendar_line0_week1_holiday0,
+*#topcalendar_line0_week2_holiday0,
+*#topcalendar_line0_week3_holiday0,
+*#topcalendar_line0_week4_holiday0,
+*#topcalendar_line0_week5_holiday0
+{
+	/* 色はグレー */
+	background-color: #f9f9f9;
+}
+/* カレンダー0行目の土曜日のtb */
+*#topcalendar_line0_week6_holiday0
+{
+	/* 色は青 */
+	background-color: #C4E9F5;
+}
+/* カレンダー1行目～6の日曜日のtb */
+*#topcalendar_line1_week0_holiday0,
+*#topcalendar_line2_week0_holiday0,
+*#topcalendar_line3_week0_holiday0,
+*#topcalendar_line4_week0_holiday0,
+*#topcalendar_line5_week0_holiday0,
+*#topcalendar_line6_week0_holiday0
+{
+	/* 色は淡い赤 */
+	background-color: #fff0f5;
+}
+/* カレンダー1行目～6の土曜日のtb */
+*#topcalendar_line1_week6_holiday0,
+*#topcalendar_line2_week6_holiday0,
+*#topcalendar_line3_week6_holiday0,
+*#topcalendar_line4_week6_holiday0,
+*#topcalendar_line5_week6_holiday0,
+*#topcalendar_line6_week6_holiday0
+{
+	/* 色は淡い青 */
+	background-color: #DCEFF5;
+}
+/* 祝日全てのタブ */
+*#topcalendar_line0_week0_holiday1,
+*#topcalendar_line0_week1_holiday1,
+*#topcalendar_line0_week2_holiday1,
+*#topcalendar_line0_week3_holiday1,
+*#topcalendar_line0_week4_holiday1,
+*#topcalendar_line0_week5_holiday1,
+*#topcalendar_line0_week6_holiday1,
+*#topcalendar_line1_week0_holiday1,
+*#topcalendar_line1_week1_holiday1,
+*#topcalendar_line1_week2_holiday1,
+*#topcalendar_line1_week3_holiday1,
+*#topcalendar_line1_week4_holiday1,
+*#topcalendar_line1_week5_holiday1,
+*#topcalendar_line1_week6_holiday1,
+*#topcalendar_line2_week0_holiday1,
+*#topcalendar_line2_week1_holiday1,
+*#topcalendar_line2_week2_holiday1,
+*#topcalendar_line2_week3_holiday1,
+*#topcalendar_line2_week4_holiday1,
+*#topcalendar_line2_week5_holiday1,
+*#topcalendar_line2_week6_holiday1,
+*#topcalendar_line3_week0_holiday1,
+*#topcalendar_line3_week1_holiday1,
+*#topcalendar_line3_week2_holiday1,
+*#topcalendar_line3_week3_holiday1,
+*#topcalendar_line3_week4_holiday1,
+*#topcalendar_line3_week5_holiday1,
+*#topcalendar_line3_week6_holiday1,
+*#topcalendar_line4_week0_holiday1,
+*#topcalendar_line4_week1_holiday1,
+*#topcalendar_line4_week2_holiday1,
+*#topcalendar_line4_week3_holiday1,
+*#topcalendar_line4_week4_holiday1,
+*#topcalendar_line4_week5_holiday1,
+*#topcalendar_line4_week6_holiday1,
+*#topcalendar_line5_week0_holiday1,
+*#topcalendar_line5_week1_holiday1,
+*#topcalendar_line5_week2_holiday1,
+*#topcalendar_line5_week3_holiday1,
+*#topcalendar_line5_week4_holiday1,
+*#topcalendar_line5_week5_holiday1,
+*#topcalendar_line5_week6_holiday1,
+*#topcalendar_line6_week0_holiday1,
+*#topcalendar_line6_week1_holiday1,
+*#topcalendar_line6_week2_holiday1,
+*#topcalendar_line6_week3_holiday1,
+*#topcalendar_line6_week4_holiday1,
+*#topcalendar_line6_week5_holiday1,
+*#topcalendar_line6_week6_holiday1
+{
+	/* 色は淡い赤 */
+	background-color: #fff0f5;
+}
+
+/*************カレンダーのcss　ここまで********************/
