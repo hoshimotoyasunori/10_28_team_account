@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: localhost
--- 生成日時: 2021 年 1 月 28 日 13:20
+-- 生成日時: 2021 年 1 月 28 日 17:26
 -- サーバのバージョン： 10.4.17-MariaDB
 -- PHP のバージョン: 8.0.0
 
@@ -20,6 +20,42 @@ SET time_zone = "+00:00";
 --
 -- データベース: `xxx`
 --
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `like_table`
+--
+
+CREATE TABLE `like_table` (
+  `id` int(12) NOT NULL,
+  `user_id` int(12) NOT NULL,
+  `team_member_id` int(12) NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- テーブルのデータのダンプ `like_table`
+--
+
+INSERT INTO `like_table` (`id`, `user_id`, `team_member_id`, `created_at`) VALUES
+(3, 0, 2, '2021-01-29 01:23:56'),
+(4, 0, 7, '2021-01-29 01:24:14'),
+(5, 0, 6, '2021-01-29 01:24:15'),
+(6, 0, 5, '2021-01-29 01:24:16'),
+(7, 0, 1, '2021-01-29 01:24:17'),
+(8, 0, 8, '2021-01-29 01:24:18'),
+(9, 0, 10, '2021-01-29 01:24:19'),
+(10, 0, 11, '2021-01-29 01:24:21'),
+(11, 0, 9, '2021-01-29 01:24:22'),
+(12, 0, 12, '2021-01-29 01:24:23'),
+(13, 0, 13, '2021-01-29 01:24:23'),
+(14, 0, 14, '2021-01-29 01:24:24'),
+(15, 0, 15, '2021-01-29 01:24:24'),
+(16, 0, 16, '2021-01-29 01:24:25'),
+(17, 0, 17, '2021-01-29 01:24:25'),
+(18, 0, 18, '2021-01-29 01:24:26'),
+(19, 0, 19, '2021-01-29 01:24:26');
 
 -- --------------------------------------------------------
 
@@ -54,6 +90,7 @@ CREATE TABLE `team_member_table` (
   `username` varchar(128) NOT NULL,
   `mail` varchar(128) NOT NULL,
   `password` varchar(128) NOT NULL,
+  `position` varchar(12) NOT NULL,
   `is_created` datetime NOT NULL,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -62,11 +99,24 @@ CREATE TABLE `team_member_table` (
 -- テーブルのデータのダンプ `team_member_table`
 --
 
-INSERT INTO `team_member_table` (`id`, `username`, `mail`, `password`, `is_created`, `updated_at`) VALUES
-(1, 'tehon', 'hoshimotoyasunori@yahoo.co.jp', '111', '2021-01-24 03:09:26', '2021-01-25 00:47:17'),
-(2, 'bin', 'bin@gmail.com', 'aaa', '2021-01-24 21:02:00', '2021-01-27 20:59:44'),
-(5, '田代', 'tashiro@gmail.com', '333', '2021-01-27 20:56:27', '2021-01-27 20:56:27'),
-(6, '野田', 'noda@gmail.com', '444', '2021-01-27 20:57:32', '2021-01-27 20:57:32');
+INSERT INTO `team_member_table` (`id`, `username`, `mail`, `password`, `position`, `is_created`, `updated_at`) VALUES
+(1, 'tehon', 'hoshimotoyasunori@yahoo.co.jp', '111', 'ho', '2021-01-24 03:09:26', '2021-01-29 00:10:40'),
+(2, 'bin', 'bin@gmail.com', 'aaa', 'wtb', '2021-01-24 21:02:00', '2021-01-27 20:59:44'),
+(5, '田代', 'tashiro@gmail.com', '333', 'so', '2021-01-27 20:56:27', '2021-01-27 20:56:27'),
+(6, '野田', 'noda@gmail.com', '444', 'lo', '2021-01-27 20:57:32', '2021-01-27 20:57:32'),
+(7, '田中', 'tanaka@gmail.com', '111', 'pr', '2021-01-28 23:26:53', '2021-01-28 23:26:53'),
+(8, '鈴木', 'suzuki@gmail.com', '111', 'fl', '2021-01-28 23:27:19', '2021-01-28 23:27:19'),
+(9, '山田', 'yamada@gmail.com', '111', 'no8', '2021-01-28 23:27:37', '2021-01-28 23:27:37'),
+(10, '後藤', 'gotoh@gmail.com', '111', 'fb', '2021-01-28 23:28:01', '2021-01-28 23:28:01'),
+(11, '足立', 'adachi@gmail.com', '111', 'cb', '2021-01-28 23:28:11', '2021-01-28 23:28:32'),
+(12, 'しらす', 'shirasu@gmail.com', '111', 'fl', '2021-01-28 23:29:09', '2021-01-28 23:29:09'),
+(13, '野口', 'noguchi@gmail.com', '111', 'cb', '2021-01-28 23:29:45', '2021-01-28 23:29:45'),
+(14, '薮田', 'yabuta@gmail.com', '111', 'fl', '2021-01-28 23:30:05', '2021-01-28 23:30:05'),
+(15, '佐藤', 'satoh@gmail.com', '111', 'fb', '2021-01-28 23:30:24', '2021-01-28 23:30:24'),
+(16, '菅野', 'sugano@gmail.com', '111', 'pr', '2021-01-28 23:30:42', '2021-01-28 23:30:42'),
+(17, '加藤', 'katoh@gmail.com', '111', 'lo', '2021-01-28 23:31:06', '2021-01-28 23:31:06'),
+(18, '井ノ口', 'inoguchi@gmail.com', '111', 'wtb', '2021-01-28 23:39:13', '2021-01-28 23:39:13'),
+(19, '木下', 'kinoshita@gmail.com', '111', 'sh', '2021-01-28 23:52:56', '2021-01-28 23:52:56');
 
 -- --------------------------------------------------------
 
@@ -99,6 +149,12 @@ INSERT INTO `users` (`id`, `team`, `name`, `mail`, `password`, `radio`, `message
 --
 
 --
+-- テーブルのインデックス `like_table`
+--
+ALTER TABLE `like_table`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- テーブルのインデックス `media`
 --
 ALTER TABLE `media`
@@ -121,6 +177,12 @@ ALTER TABLE `users`
 --
 
 --
+-- テーブルの AUTO_INCREMENT `like_table`
+--
+ALTER TABLE `like_table`
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
 -- テーブルの AUTO_INCREMENT `media`
 --
 ALTER TABLE `media`
@@ -130,7 +192,7 @@ ALTER TABLE `media`
 -- テーブルの AUTO_INCREMENT `team_member_table`
 --
 ALTER TABLE `team_member_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- テーブルの AUTO_INCREMENT `users`
