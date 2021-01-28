@@ -25,8 +25,8 @@
                     <a class="nav-link text-dark" href="#Team-build">Team-build</a>
                     <a class="nav-link text-dark" href="#Tool">Tool</a>
                     <a class="nav-link text-dark" href="#contact">Contact</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/introduction.php">企業情報</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/owner_login.php">チーム</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/introduction.php">企業情報</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/owner_login.php">チーム</a>
                 </div>
             </div>
 

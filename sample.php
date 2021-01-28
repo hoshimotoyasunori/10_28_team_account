@@ -180,11 +180,11 @@ while ($i < count($display_tb_name_array)) { //上で作ったtbのname属性の
                     menu
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/owner.php">TOP</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/kanri.php">管理者画面</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/all_member.php">メンバー</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/meeting.php">ミーティング</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/logout.php">ログアウト</a><br>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/owner.php">TOP</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/kanri_login.php">管理者画面</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/all_member.php">メンバー</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/meeting.php">ミーティング</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/logout.php">ログアウト</a><br>
                 </div>
             </div>
         </nav>

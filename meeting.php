@@ -53,10 +53,10 @@ if ($status == false) {
                     menu
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/owner.php">TOP</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/all_member.php">メンバー</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/sample.php">月間スケジュール</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/logout.php">ログアウト</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/owner.php">TOP</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/all_member.php">メンバー</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/sample.php">月間スケジュール</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/logout.php">ログアウト</a>
                 </div>
             </div>
         </nav>

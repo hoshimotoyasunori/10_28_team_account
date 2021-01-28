@@ -22,9 +22,9 @@
                     menu
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/owner.php">TOPページ</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/kanri_login.php">管理者ページ</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/login.php">選手ページ</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/owner.php">TOPページ</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/kanri_login.php">管理者ページ</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/login.php">選手ページ</a>
                 </div>
             </div>
 

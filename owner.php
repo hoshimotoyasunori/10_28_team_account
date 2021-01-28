@@ -53,11 +53,11 @@ if ($status == false) {
                     menu
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/introduction.php">企業情報</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/kanri_login.php">管理者ページ</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/login.php">選手ページ</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/meeting.php">ミーティング</a>
-                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/test1/sample.php">月間スケジュール</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/introduction.php">企業情報</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/kanri_login.php">管理者ページ</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/login.php">選手ページ</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/meeting.php">ミーティング</a>
+                    <a class="nav-link text-dark" href="http://localhost/2021_01_16/sample.php">月間スケジュール</a>
                 </div>
             </div>
         </nav>
@@ -107,7 +107,7 @@ if ($status == false) {
     <footer class="bottom"></footer>
     <!-- フッター -->
     <footer class="text-center bg-dark text-white fixed-bottom">
-        <a href="http://localhost/2021_01_16/test1/index.php">
+        <a href="http://localhost/2021_01_16/index.php">
             <p class="py-3">© 2012-2021_8PoS-system</p>
         </a>
     </footer>
