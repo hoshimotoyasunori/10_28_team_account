@@ -64,7 +64,7 @@ if ($status == false) {
                 mail:<input type="text" name="mail" value="<?= $record["mail"] ?>">
             </div>
             <div>
-                password:<input type="password" name="password" value="<?= $record["password"] ?>">
+                password:<input type="text" name="password" value="<?= $record["password"] ?>">
             </div>
             <div>
                 position:<select name="position" id="">

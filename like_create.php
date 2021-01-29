@@ -1,6 +1,4 @@
 <?php
-// var_dump($_GET);
-// exit();
 session_start();
 include('functions.php');
 check_session_id();
@@ -8,6 +6,8 @@ check_session_id();
 $user_id = $_GET['user_id'];
 $team_member_id = $_GET['team_member_id'];
 
+// var_dump($_GET);
+// exit();
 
 
 $pdo = connect_to_db();

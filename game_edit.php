@@ -1,9 +1,20 @@
 <?php
+// 送信データのチェック
+// var_dump($_GET);
+// exit();
+$id = $_GET["id"];
+
+// 関数ファイルの読み込み
 session_start();
 include("functions.php");
 check_session_id();
-// DB接続
+
 $pdo = connect_to_db();
+
+
+
+
+
 
 
 $sql = 'SELECT * FROM team_member_table where position like "pr" ';
@@ -192,12 +203,14 @@ if ($status == false) {
     unset($record);
 }
 
-
-$sql = 'SELECT * FROM game_member_table order by gameday desc';
+// データ取得SQL作成
+$sql = 'SELECT * FROM game_member_table WHERE id=:id';
 
 // SQL準備&実行
 $stmt = $pdo->prepare($sql);
+$stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $status = $stmt->execute();
+
 // データ登録処理後
 if ($status == false) {
     // SQL実行に失敗した場合はここでエラーを出力し，以降の処理を中止する
@@ -205,17 +218,17 @@ if ($status == false) {
     echo json_encode(["error_msg" => "{$error[2]}"]);
     exit();
 } else {
-    // 正常にSQLが実行された場合は入力ページファイルに移動し，入力ページの処理を実行する
-    // fetchAll()関数でSQLで取得したレコードを配列で取得できる
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);  // データの出力用変数（初期値は空文字）を設定
-    $output = "";
-
-    foreach ($result as $record) {
-        // $output .= "<td>{$record["team"]}</td>";
-        $output .= "<div><h3>{$record["gameday"]}{$record["enemy"]}</h3><br>FW<br>1.{$record["pr1"]}2.{$record["ho"]}3.{$record["pr3"]}<br>6.{$record["fl6"]}4.{$record["lo4"]}5.{$record["lo5"]}7.{$record["fl7"]}<br>8.{$record["no8"]}<br>BK<br>9.{$record["sh"]}10.{$record["so"]}<br>11.{$record["wtb11"]}12.{$record["cb12"]}13.{$record["cb13"]}14.{$record["wtb14"]}<br>15.{$record["fb"]}<br>reserve<br>16.{$record["reserve16"]}17.{$record["reserve17"]}18.{$record["reserve18"]}19.{$record["reserve19"]}20.{$record["reserve20"]}21.{$record["reserve21"]}22.{$record["reserve22"]}23.{$record["reserve23"]}24.{$record["reserve24"]}<br><a href='game_edit.php?id={$record["id"]}'>編集</a><a href='game_delete.php?id={$record["id"]}'>消去</a></div>";
-    }
-    unset($value);
+    // 正常にSQLが実行された場合は指定の11レコードを取得
+    // fetch()関数でSQLで取得したレコードを取得できる
+    $record = $stmt->fetch(PDO::FETCH_ASSOC);
+    // var_dump($record);
+    // exit();
 }
+
+
+
+
+
 
 
 
@@ -244,7 +257,7 @@ if ($status == false) {
         <fieldset>
             <legend> </legend>
             <legend class="top">
-                <div>試合メンバー </div>
+                <div><?= $record["enemy"] ?></div>
             </legend>
             <legend>
                 <a href="owner.php">TOP</a>
@@ -256,11 +269,11 @@ if ($status == false) {
         </fieldset>
     </header>
     <main>
-        <form class="form-inline" action="game_act.php" method="POST">
+        <form class="form-inline" action="game_update.php" method="POST">
 
             <div class="form-group">
-                日程：<input type="date" name="gameday" placeholder="試合日">
-                <input type="text" name="enemy" class="form-control" id="exampleInputenemy1" placeholder="敵チーム名">
+                <!-- 日程：<input type="date" name="gameday" placeholder="試合日"> -->
+                <input type="text" name="enemy" class="form-control" id="exampleInputenemy1" value="<?= $record["enemy"] ?>">
                 <br>
                 メンバー表<br>
                 01.<select name="pr1" id="">
@@ -349,6 +362,7 @@ if ($status == false) {
             <div class="btn">
                 <button class="btn btn-default">送信</button>
             </div>
+            <input type="hidden" name="id" value="<?= $record["id"] ?>">
 
         </form>
 

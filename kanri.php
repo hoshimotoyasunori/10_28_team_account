@@ -68,6 +68,7 @@ if ($status == false) {
     </header>
     <main>
         <a href="register.php">メンバー追加</a>
+        <p>コーチ陣での各選手の評価</p>
         <?= $output ?>
     </main>
     <footer>

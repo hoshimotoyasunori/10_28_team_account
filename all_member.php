@@ -116,6 +116,7 @@ try {
                     <a href="owner.php">TOP</a>
                     <a href="sample.php">予定表</a>
                     <a href="meeting.php">ミーティング</a>
+                    <a href="mom.php">MOM投票</a>
                     <a href="logout.php">ログアウト</a>
                 </div>
             </legend>
