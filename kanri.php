@@ -3,7 +3,11 @@ session_start();
 include("functions.php");
 check_session_id();
 
-$user_id = $_SESSION['id'];
+$user_id = $_SESSION['session_id'];
+// var_dump($_SESSION);
+// var_dump($user_id);
+// exit();
+//// idが入ってない
 // DB接続
 $pdo = connect_to_db();
 $sql = 'SELECT * FROM team_member_table LEFT OUTER JOIN (SELECT team_member_id, COUNT(id) AS cnt
@@ -28,7 +32,7 @@ if ($status == false) {
 
     foreach ($result as $record) {
         // $output .= "<td>{$record["team"]}</td>";
-        $output .= "<div>{$record["username"]}<a href='like_create.php?user_id={$user_id}&team_member_id={$record["id"]}'>like{$record["cnt"]}</a><a href='edit.php?id={$record["id"]}'>編集</a>・<a href='delete.php?id={$record["id"]}'>消去</a><br></div>";
+        $output .= "<div>{$record["username"]}<a href='edit.php?id={$record["id"]}'>編集</a>・<a href='delete.php?id={$record["id"]}'>消去</a><br></div>";
     }
     unset($value);
 }

@@ -5,7 +5,7 @@ check_session_id();
 
 $user_id = $_GET['user_id'];
 $team_member_id = $_GET['team_member_id'];
-
+////idが入ってない
 // var_dump($_GET);
 // exit();
 
@@ -47,7 +47,7 @@ if ($status == false) {
         echo json_encode(["error_msg" => "{$error[2]}"]);
         exit();
     } else {
-        header('Location:kanri.php');
+        header('Location:mom.php');
         exit();
     }
 }

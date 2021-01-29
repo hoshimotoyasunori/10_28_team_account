@@ -57,6 +57,8 @@ if ($status == false) {
         $_SESSION["session_id"] = session_id();
         $_SESSION["is_admin"] = $val["is_admin"];
         $_SESSION["name"] = $val["name"];
+        // var_dump($_SESSION);
+        // exit();
         header("Location:kanri.php"); // 一覧ページへ移動 
         exit();
     }
