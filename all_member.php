@@ -97,17 +97,34 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- BootstrapのCSS読み込み -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- jQuery読み込み -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>（一覧画面）</title>
 </head>
 
 <body>
-    <header>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light mb-2 bg-dark text-white">
+            <a class=" navbar-brand  text-white" href="#">ALL-MEMBER</a>
+            <div class="dropdown float-right">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    menu
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <a class="nav-link text-dark" href="owner.php">TOP</a>
+                    <a class="nav-link text-dark" href="sample.php">予定表</a>
+                    <a class="nav-link text-dark" href="meeting.php">ミーティング</a>
+                    <a class="nav-link text-dark" href="mom.php">MOM投票</a>
+                    <a class="nav-link text-dark" href="logout.php">ログアウト</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- <header>
         <fieldset>
             <legend> </legend>
             <legend class="top">
@@ -121,7 +138,7 @@ try {
                 </div>
             </legend>
         </fieldset>
-    </header>
+    </header> -->
     <main>
         <fieldset>
             <legend>
@@ -162,8 +179,15 @@ try {
             ?>
         </fieldset>
     </main>
-    <footer>
+    <footer class="bottom"></footer>
+    <!-- フッター -->
+    <footer class="text-center bg-dark text-white fixed-bottom">
+        <a href="index.php">
+            <p class="py-3">© 2012-2021_8PoS.Lab</p>
+        </a>
     </footer>
+    <footer>　　</footer><br>
+    <footer>　　</footer>
 </body>
 
 </html>

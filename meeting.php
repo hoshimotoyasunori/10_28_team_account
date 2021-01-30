@@ -35,26 +35,28 @@ if ($status == false) {
 <html lang="ja">
 
 <head>
+
+    <link rel="stylesheet" href="_shared/style.css">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSSの読み込み -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <title><?= $output ?>-Meeting</title>
+    <title>TEAM-Meeting</title>
 </head>
 
 <body style="background-color:#e3f2fd;">
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light mb-2 bg-dark text-white">
-            <a class=" navbar-brand  text-white" href="#"><?= $output ?>-Meeting</a>
+            <a class=" navbar-brand  text-white" href="#">TEAM-Meeting</a>
             <div class="dropdown float-right">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     menu
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
                     <a class="nav-link text-dark" href="owner.php">TOP</a>
-                    <a class="nav-link text-dark" href="all_member.php">メンバー</a>
+                    <a class="nav-link text-dark" href="all_member.php">選手ページ</a>
                     <a class="nav-link text-dark" href="sample.php">月間スケジュール</a>
                     <a class="nav-link text-dark" href="logout.php">ログアウト</a>
                 </div>
@@ -62,8 +64,48 @@ if ($status == false) {
         </nav>
     </header>
 
+    <main>
+        <div class="container">
+            <h1 class="heading">Room</h1>
+            <p class="note">
+                Change Room mode (before join in a room):
+                <a href="#">mesh</a> / <a href="#sfu">sfu</a>
+            </p>
+            <div class="room">
+                <div>
+                    <video id="js-local-stream"></video>
+                    <span id="js-room-mode"></span>:
+                    <input type="text" placeholder="Room Name" id="js-room-id">
+                    <button id="js-join-trigger">入室</button>
+                    <button id="js-leave-trigger">退室</button>
+                </div>
 
+                <div class="remote-streams" id="js-remote-streams"></div>
 
+                <div>
+                    text-chat
+                    <pre class="messages" id="js-messages"></pre>
+                    <input type="text" id="js-local-text">
+                    <button id="js-send-trigger">送信</button>
+                </div>
+            </div>
+            <p class="meta" id="js-meta"></p>
+        </div>
+        <script src="//cdn.webrtc.ecl.ntt.com/skyway-4.3.0.js"></script>
+        <script src="_shared/key.js"></script>
+        <script src="_shared/script.js"></script>
+    </main>
+    <!-- skyway -->
+    <footer class="bottom"></footer>
+    <!-- フッター -->
+    <footer class="text-center bg-dark text-white fixed-bottom">
+        <a href="index.php">
+            <p class="py-3">© 2012-2021_8PoS.Lab</p>
+        </a>
+    </footer>
+    <footer>　　</footer>
+    <footer>　　</footer>
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, Popper.js, Bootstrap JSの順番に読み込む -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

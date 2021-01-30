@@ -42,34 +42,33 @@ if ($status == false) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- BootstrapのCSS読み込み -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- jQuery読み込み -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- BootstrapのJS読み込み -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/login.css">
     <title>（編集画面）</title>
 </head>
 
 <body>
-    <form action="update.php" method="POST">
-        <fieldset>
-            <legend>（編集画面）</legend>
-
-
-            <div>
-                username:<input type="text" name="username" value="<?= $record["username"] ?>">
+    <main>
+        <form class="form-inline" action="update.php" method="POST">
+            <div class="form-group">
+                <label for="exampleInputName1"></label>
+                <input type="text" class="form-control" id="exampleInputName1" placeholder="<?= $record["username"] ?>" name="username">
             </div>
-            <div>
-                mail:<input type="text" name="mail" value="<?= $record["mail"] ?>">
+            <div class="form-group">
+                <label for="exampleInputEmail1"></label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?= $record["mail"] ?>" name="mail">
             </div>
-            <div>
-                password:<input type="text" name="password" value="<?= $record["password"] ?>">
+            <div class="form-group">
+                <label for="exampleInputPassword1"></label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="<?= $record["password"] ?>" name="password">
             </div>
-            <div>
-                position:<select name="position" id="">
-
-                    <!-- <option value=""><?= $record["position"] ?></option> -->
+            <div class="form-group">
+                <label for="exampleInputposition1"></label>
+                ポジション：<select name="position" id="">
                     <option value="pr">pr</option>
                     <option value="ho">ho</option>
                     <option value="lo">lo</option>
@@ -80,16 +79,17 @@ if ($status == false) {
                     <option value="cb">cb</option>
                     <option value="wtb">wtb</option>
                     <option value="fb">fb</option>
+                    <option value="--">--</option>
                 </select>
             </div>
-            <div>
-                <button>更新</button>
-            </div>
             <input type="hidden" name="id" value="<?= $record["id"] ?>">
-        </fieldset>
+            <div class="btn">
+                <button class="btn btn-default">更新</button>
+            </div>
+            <!-- <a href="owner.php">top画面</a>　 　<a href="login.php"> ログイン</a> -->
+        </form>
 
-    </form>
-
+    </main>
 </body>
 
 </html>
